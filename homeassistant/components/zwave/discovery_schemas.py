@@ -84,6 +84,11 @@ DISCOVERY_SCHEMAS = [
                     ],
                     const.DISC_OPTIONAL: True,
                 },
+                'valve_state': {
+                    const.DISC_COMMAND_CLASS: [
+                        const.COMMAND_CLASS_SWITCH_MULTILEVEL],
+                    const.DISC_OPTIONAL: True,
+                },
                 "zxt_120_swing_mode": {
                     const.DISC_COMMAND_CLASS: [const.COMMAND_CLASS_CONFIGURATION],
                     const.DISC_INDEX: [33],
@@ -193,10 +198,12 @@ DISCOVERY_SCHEMAS = [
         const.DISC_COMPONENT: "light",
         const.DISC_GENERIC_DEVICE_CLASS: [
             const.GENERIC_TYPE_SWITCH_MULTILEVEL,
+            const.GENERIC_TYPE_THERMOSTAT,
             const.GENERIC_TYPE_SWITCH_REMOTE,
         ],
         const.DISC_SPECIFIC_DEVICE_CLASS: [
             const.SPECIFIC_TYPE_POWER_SWITCH_MULTILEVEL,
+            const.SPECIFIC_TYPE_THERMOSTAT_GENERAL_V2,
             const.SPECIFIC_TYPE_SCENE_SWITCH_MULTILEVEL,
             const.SPECIFIC_TYPE_NOT_USED,
         ],
